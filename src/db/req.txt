@@ -1,0 +1,7 @@
+CREATE TABLE ActionAddress (
+	id serial PRIMARY KEY,
+	address CHAR(16)  NOT NULL,
+        port int  NOT NULL
+);
+
+delete from ActionAddress;

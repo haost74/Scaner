@@ -1,0 +1,3 @@
+/home/haost/Desktop/app/build/CMakeFiles/rebuild_cache.dir
+/home/haost/Desktop/app/build/CMakeFiles/edit_cache.dir
+/home/haost/Desktop/app/build/CMakeFiles/app.dir

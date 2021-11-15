@@ -1,0 +1,1 @@
+/bin/c++    -rdynamic CMakeFiles/app.dir/src/main.cpp.o CMakeFiles/app.dir/src/address.cpp.o CMakeFiles/app.dir/src/db/postgres.cpp.o  -o app  -lpqxx -lpthread 
