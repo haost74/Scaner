@@ -1,4 +1,4 @@
-# Install script for directory: /home/haost/Desktop/app
+# Install script for directory: /home/haost/Desktop/Scaner
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/haost/Desktop/app/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/haost/Desktop/Scaner/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

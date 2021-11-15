@@ -6,11 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/home/haost/Desktop/app/src/address.h
+/home/haost/Desktop/Scaner/src/address.cpp
+address.h
+/home/haost/Desktop/Scaner/src/address.h
+
+/home/haost/Desktop/Scaner/src/address.h
 string
 -
 
-/home/haost/Desktop/app/src/db/postgres.h
+/home/haost/Desktop/Scaner/src/db/postgres.cpp
+postgres.h
+/home/haost/Desktop/Scaner/src/db/postgres.h
+
+/home/haost/Desktop/Scaner/src/db/postgres.h
 string
 -
 pqxx/pqxx
@@ -18,13 +26,13 @@ pqxx/pqxx
 iostream
 -
 
-/home/haost/Desktop/app/src/main.cpp
+/home/haost/Desktop/Scaner/src/main.cpp
 iostream
 -
 address.h
-/home/haost/Desktop/app/src/address.h
+/home/haost/Desktop/Scaner/src/address.h
 db/postgres.h
-/home/haost/Desktop/app/src/db/postgres.h
+/home/haost/Desktop/Scaner/src/db/postgres.h
 pqxx/pqxx
 -
 

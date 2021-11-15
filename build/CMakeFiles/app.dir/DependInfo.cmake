@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/haost/Desktop/app/src/address.cpp" "/home/haost/Desktop/app/build/CMakeFiles/app.dir/src/address.cpp.o"
-  "/home/haost/Desktop/app/src/db/postgres.cpp" "/home/haost/Desktop/app/build/CMakeFiles/app.dir/src/db/postgres.cpp.o"
-  "/home/haost/Desktop/app/src/main.cpp" "/home/haost/Desktop/app/build/CMakeFiles/app.dir/src/main.cpp.o"
+  "/home/haost/Desktop/Scaner/src/address.cpp" "/home/haost/Desktop/Scaner/build/CMakeFiles/app.dir/src/address.cpp.o"
+  "/home/haost/Desktop/Scaner/src/db/postgres.cpp" "/home/haost/Desktop/Scaner/build/CMakeFiles/app.dir/src/db/postgres.cpp.o"
+  "/home/haost/Desktop/Scaner/src/main.cpp" "/home/haost/Desktop/Scaner/build/CMakeFiles/app.dir/src/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
