@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/haost/Desktop/app/src/address.h
+string
+-
+
+/home/haost/Desktop/app/src/db/postgres.h
+string
+-
+pqxx/pqxx
+-
+iostream
+-
+
+/home/haost/Desktop/app/src/main.cpp
+iostream
+-
+address.h
+/home/haost/Desktop/app/src/address.h
+db/postgres.h
+/home/haost/Desktop/app/src/db/postgres.h
+pqxx/pqxx
+-
+

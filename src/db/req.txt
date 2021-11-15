@@ -1,0 +1,16 @@
+CREATE TABLE ActionAddress (
+	id serial PRIMARY KEY,
+	address CHAR(16)  NOT NULL,
+        port int  NOT NULL
+);
+
+delete from ActionAddress;
+
+
+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
+
+
+ git remote set-url origin https://sampleuser:a7b19929***58fe65d1c@github.com/sampleuser/sampleproject.git
+
+
+  git remote set-url origin https://sampleuser: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@github.com/haost74/Scaner.git
