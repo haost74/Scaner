@@ -1,3 +1,0 @@
-/home/haost/Desktop/Scaner/build/CMakeFiles/rebuild_cache.dir
-/home/haost/Desktop/Scaner/build/CMakeFiles/edit_cache.dir
-/home/haost/Desktop/Scaner/build/CMakeFiles/app.dir
