@@ -1,6 +1,7 @@
 #include <iostream>
 #include "address.h"
 #include "db/postgres.h"
+#include "scaner.h"
 
 #include <pqxx/pqxx>
 
@@ -8,6 +9,10 @@
 
 int main()
 {
+
+    scaner sn;
+    sn.scan("0.0.0.0", 80);
+    return 0;
     postgres db;
 
     auto key = db.GetKey("../key.txt");

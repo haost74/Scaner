@@ -15,6 +15,7 @@ add_executable(app
     src/main.cpp 
     src/address.cpp
     src/db/postgres.cpp
+    src/scaner.cpp
 )
 #target_link_libraries (${OUT_TARGET} ${SQLite3_LIBRARIES})
 target_link_libraries(app
