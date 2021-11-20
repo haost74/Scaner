@@ -9,8 +9,10 @@
 int main()
 {
     postgres db;
+
+    auto key = db.GetKey("../key.txt");
     bool isConnect = static_cast<bool>(db.init("tkhhpiuo", "abul.db.elephantsql.com", 
-    "28-ottalQ-H-3_kLM4S3PC-qu0kct_vc", "tkhhpiuo"));
+    key, "tkhhpiuo"));
      std::cout << isConnect << '\n';
 
 

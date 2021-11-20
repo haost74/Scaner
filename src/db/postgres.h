@@ -5,6 +5,7 @@
 #include <pqxx/pqxx>
 
 #include <iostream>
+#include <string>
 
 class postgres{
 
@@ -17,6 +18,7 @@ class postgres{
       bool IsConnect = false;
  
     public:
+      std::string GetKey(std::string path);
       
       bool init(std::string user, std::string host, 
       std::string password, std::string dbname);

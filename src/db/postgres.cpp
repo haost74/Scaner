@@ -1,5 +1,8 @@
 #include "postgres.h"
 
+#include <fstream>
+
+
 
 bool postgres::init(std::string user, std::string host, 
       std::string password, std::string dbname){
@@ -67,8 +70,26 @@ void postgres::transag(std::string sql) {
         throw;
     }
     }
-    
+}
 
+std::string postgres::GetKey(std::string path)
+{
+    std::string key{""};
+
+    std::ifstream file(path);
+if (file.is_open()) {
+    std::string line;
+    while (std::getline(file, line)) {
+        // using printf() in all tests for consistency
+        //printf("%s", line.c_str());
+        key = line;
+    }
+    file.close();
+}
+    
+      
+
+    return key;
 }
 
 postgres::postgres(){
