@@ -2,6 +2,7 @@
 #define __ADDRESS_CPP__
 
 #include <string>
+#include <iostream>
 
 class address
 {
@@ -11,6 +12,7 @@ private:
     int d2 = 0;
     int d3 = 0;
     int d4 = -1;
+    void split(std::string str);
 public:
     address(/* args */);
     ~address();

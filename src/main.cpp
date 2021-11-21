@@ -12,6 +12,7 @@ int main()
 {
     run r;
     r.start();
+    std::cout << "end" << '\n';
    
     return 0;
 
