@@ -1,3 +1,7 @@
+#ifndef __SCANER_CPP__
+#define __SCANER_CPP__
+
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -24,4 +28,4 @@ public:
     void smart();
 };
 
-
+#endif

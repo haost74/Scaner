@@ -2,6 +2,7 @@
 #include "address.h"
 #include "db/postgres.h"
 #include "scaner.h"
+#include "run.h"
 
 #include <pqxx/pqxx>
 
@@ -9,6 +10,10 @@
 
 int main()
 {
+    run r;
+    r.start();
+   
+    return 0;
 
     scaner sn;
     //sn.non_blocking_socket("80.87.197.181", 22);
