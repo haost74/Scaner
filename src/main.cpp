@@ -11,7 +11,9 @@ int main()
 {
 
     scaner sn;
-    sn.scan("0.0.0.0", 80);
+    //sn.non_blocking_socket("80.87.197.181", 22);
+    sn.non_blocking_socket("0.0.0.1", 1);
+    //sn.smart();
     return 0;
     postgres db;
 

@@ -21,6 +21,7 @@ public:
     ~ scaner();
     void non_blocking_socket(char* addr, int port);
     int scan(std::string addr, int port);
+    void smart();
 };
 
 

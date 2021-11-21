@@ -12,6 +12,24 @@
 }
 
 
+void scaner::smart(){
+     struct addrinfo hints, *res;
+ int sockfd;
+ // сначала заполнить адресные структуры с помощью getaddrinfo():
+memset(&hints, 0, sizeof hints);
+hints.ai_family = AF_UNSPEC;
+ hints.ai_socktype = SOCK_STREAM;
+ getaddrinfo("80.87.197.181", "22", &hints, &res);
+ //getaddrinfo("0.0.0.0", "80", &hints, &res);
+ // создать сокет:
+ sockfd = socket(res->ai_family, res->ai_socktype, res->ai_protocol);
+ // подключить!
+int isConn = connect(sockfd, res->ai_addr, res->ai_addrlen); 
+    
+    std::cout << isConn << '\n';
+}
+
+
 int scaner::scan(std::string addr, int port) {
 
     struct sockaddr_in address;  /* the libc network address data structure */
@@ -42,6 +60,8 @@ int scaner::scan(std::string addr, int port) {
         socklen_t len = sizeof so_error;
 
         getsockopt(sock, SOL_SOCKET, SO_ERROR, &so_error, &len);
+
+        std::cout << so_error << '\n';
 
         if (so_error == 0) {
             //printf("%s:%d is open\n", addr, port);
@@ -80,12 +100,9 @@ void scaner::non_blocking_socket(char* addr, int port)
 	auto idCon = connect(sockfd, res->ai_addr, res->ai_addrlen);
 
 
-    std::cout << idCon << '\n';
-
-
 	 FD_ZERO(&fdset);
 	 FD_SET(sockfd, &fdset);
-		tv.tv_sec = 7;             /* 10 second timeout */
+		tv.tv_sec = 5;             /* 10 second timeout */
 		tv.tv_usec = 0;
 
 		if (select(sockfd + 1, NULL, &fdset, NULL, &tv) == 1)
@@ -96,6 +113,8 @@ void scaner::non_blocking_socket(char* addr, int port)
 			 if (so_error == 0) {
 				printf("%s:%d is open\n", addr, port);
 			}
+
+            std::cout << so_error << '\n';
 		}
 
 	std::cout << idCon << '\n';
