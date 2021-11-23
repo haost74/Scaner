@@ -25,15 +25,29 @@ run::run(){
 
 run::~run(){
    db.transag("delete from parameter_end; insert into parameter_end (""address"") values ('" + addr + "')");
+   //db.transag("delete from parameter_end; insert into parameter_end (""address"") values ('0.0.0.-1')");
 }
 
 void run::start(){
+
+    address data;
+    std::vector<std::string> res;
+    data.split(addr, ".", res);
+
+    auto d1 = std::stoi( res[0]);
+    auto d2 = std::stoi( res[1]);
+    auto d3 = std::stoi( res[2]);
+    auto d4 = std::stoi( res[3]);
+
+    data.setAddress(d1, d2, d3, d4);
+
+    std::cout << data.getAddress() << '\n';
 
 
      try
      {
          address adr;
-        while (true)
+        //while (true)
         {
            
         }

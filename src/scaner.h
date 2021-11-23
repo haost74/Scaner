@@ -15,6 +15,8 @@
 #include <string>
 #include <unistd.h>
 
+#include <functional>
+
 
 class  scaner
 {
@@ -24,8 +26,10 @@ public:
      scaner(/* args */);
     ~ scaner();
     void non_blocking_socket(char* addr, int port);
+    void non_blocking_socket(char* addr, int port, 
+            std::function<void(std::string, int)> f_display);
     int scan(std::string addr, int port);
-    void smart();
+    void smart();    
 };
 
 #endif

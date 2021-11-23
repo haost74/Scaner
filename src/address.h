@@ -3,6 +3,7 @@
 
 #include <string>
 #include <iostream>
+#include <vector>
 
 class address
 {
@@ -18,7 +19,7 @@ public:
     ~address();
     std::string getAddress();
     void setAddress(int d1, int d2, int d3, int d4);
-
+    void split(std::string s, std::string delimiter, std::vector<std::string>& res);
 };
 
 
