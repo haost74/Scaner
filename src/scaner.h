@@ -23,11 +23,10 @@ class  scaner
 private:
     /* data */
 public:
+    int (*fcnPtr)();
      scaner(/* args */);
     ~ scaner();
-    void non_blocking_socket(char* addr, int port);
-    void non_blocking_socket(char* addr, int port, 
-            std::function<void(std::string, int)> f_display);
+    bool non_blocking_socket(std::string addr, int port);
     int scan(std::string addr, int port);
     void smart();    
 };

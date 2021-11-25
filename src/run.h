@@ -14,6 +14,8 @@ std::string addr{""};
 postgres db;
 public:
   void start();
+  void open();
+  void insert(std::string address, int port);
   run();
   ~run();
 
