@@ -12,7 +12,7 @@
 int main()
 {
     run r;
-    //r.start();
+r.open();
     
     std::thread th1 ([&]()
     {

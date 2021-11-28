@@ -13,14 +13,9 @@ run::run(){
     
         for(auto row : res)
         {
-            // table_name
-        std::cout << row["address"].c_str() << '\n';
-
-        addr = row["address"].c_str();
+            addr = row["address"].c_str();
         }
-    }
-
-    std::cout << isConnect << '\n';         
+    }        
 }
 
 run::~run(){
@@ -73,7 +68,7 @@ void run::start(){
                     insert(str, start);
                 }
                 else{
-                    std::cout << str << " do not open port = " << start << '\n';
+                    //std::cout << str << " do not open port = " << start << '\n';
                 }
             }
         }
@@ -108,10 +103,15 @@ std::cout << res.size() << " <-----" << '\n';
 
     std::cout << address << " " << port << " " << isEg << '\n';
  
-    if(isEg == "0") return;
-  std::string sql = "insert into ActionAddress (\"address\", \"port\") values('" + address +"', " 
-  + std::to_string(port) + ")";
-   db.transag(sql);
+    if(isEg == "0") {
+        // std::string sql = "insert into ActionAddress (\"address\", \"port\") values('" + address +"', " 
+        // + std::to_string(port) + ")";
+
+        std::string sql = "insert into ActionAddress (address, port) values('" + address + "' ," + std:: to_string(port) + ")";
+        //std::cout << sql << '\n';
+
+        db.transag(sql);
+    }
 }
 
 void run::Clear()
