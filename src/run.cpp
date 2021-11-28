@@ -30,12 +30,6 @@ run::~run(){
 
 void run::open()
 {
-
-}
-
-void run::start(){
-
-    address data;
     std::vector<std::string> res;
     data.split(addr, ".", res);
 
@@ -45,34 +39,43 @@ void run::start(){
     auto d4 = std::stoi( res[3]);
 
     data.setAddress(d1, d2, d3, d4);
+}
 
-    std::cout << data.getAddress() << '\n';
+void run::start(){
+
+   
+    
+
+    //std::cout << data.getAddress() << '\n';
 
     scaner sn;
-    auto str = data.getAddress();
-     auto isRes = sn.non_blocking_socket("80.87.197.181", 22);
-    //auto isRes = sn.non_blocking_socket("0.0.0.0", 1);
-    std::cout << isRes << '\n';
+    // auto str = data.getAddress();
+    //  auto isRes = sn.non_blocking_socket("80.87.197.181", 22);
+    // //auto isRes = sn.non_blocking_socket("0.0.0.0", 1);
+    // std::cout << isRes << '\n';
 
      try
      {
-         address adr;
-         int i =0;
+         int i = 0;
         while (true)
         {
-            auto str = data.getAddress();
-            insert(str, 0);
-            break;
-            if(i > 10)
+            auto str = data.getAddress();            
+            Clear();
+            std::cout << str << '\n';
+            int start = 0;
+            int stop = 65535;
+
+            while ((++start <= stop))
             {
-                i = 0;
-                std::cout << str << '\n';
+                auto isRes = sn.non_blocking_socket(str, start);
+                if(isRes)
+                {
+                    insert(str, start);
+                }
+                else{
+                    std::cout << str << " do not open port = " << start << '\n';
+                }
             }
-            ++i;
-            auto isRes = sn.non_blocking_socket(str, 22);
-            if(isRes)
-            std::cout << isRes << '\n';
-            
         }
      }
      catch(const std::exception& e)
@@ -90,7 +93,6 @@ auto key = db.GetKey("../key.txt");
     key, "tkhhpiuo"));
 
    std::string isEg{"-1"};
-   address = "0.0.0.0"; port = 81;
 
    // select * from actionaddress where address = '0.0.0.0' and port = 80;
    auto res = db.require("select count(*) as count from ActionAddress where address = '"    
@@ -110,4 +112,17 @@ std::cout << res.size() << " <-----" << '\n';
   std::string sql = "insert into ActionAddress (\"address\", \"port\") values('" + address +"', " 
   + std::to_string(port) + ")";
    db.transag(sql);
+}
+
+void run::Clear()
+{
+#if defined _WIN32
+    system("cls");
+    //clrscr(); // including header file : conio.h
+#elif defined (__LINUX__) || defined(__gnu_linux__) || defined(__linux__)
+    system("clear");
+    //std::cout<< u8"\033[2J\033[1;1H"; //Using ANSI Escape Sequences 
+#elif defined (__APPLE__)
+    system("clear");
+#endif
 }

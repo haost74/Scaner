@@ -5,14 +5,48 @@
 #include "run.h"
 
 #include <pqxx/pqxx>
+#include <thread>
 
 
 
 int main()
 {
     run r;
-    r.start();
-    std::cout << "end" << '\n';
+    //r.start();
+    
+    std::thread th1 ([&]()
+    {
+        r.start();
+    });
+    th1.detach();
+
+    std::thread th2 ([&]()
+    {
+        r.start();
+    });
+    th2.detach();
+
+    std::thread th3 ([&]()
+    {
+        r.start();
+    });
+    th3.detach();
+
+    std::thread th4 ([&]()
+    {
+        r.start();
+    });
+    th4.detach();
+
+
+
+    std::string h {""};
+    while (h != "h")
+    {
+        std::cin >> h;
+    }
+    
+
    
     return 0;
 

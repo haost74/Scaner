@@ -10,12 +10,14 @@
 
 class run{
 private:
+address data;
 std::string addr{""};
 postgres db;
 public:
   void start();
   void open();
   void insert(std::string address, int port);
+  void Clear();
   run();
   ~run();
 

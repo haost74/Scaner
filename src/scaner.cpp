@@ -105,7 +105,7 @@ bool scaner::non_blocking_socket(std::string addr, int port)
 
 	 FD_ZERO(&fdset);
 	 FD_SET(sockfd, &fdset);
-		tv.tv_sec = 5;             /* 10 second timeout */
+		tv.tv_sec = 3;             /* 10 second timeout */
 		tv.tv_usec = 0;
 
 		if (select(sockfd + 1, NULL, &fdset, NULL, &tv) == 1)
