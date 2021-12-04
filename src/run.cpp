@@ -68,7 +68,7 @@ void run::start(){
                     insert(str, start);
                 }
                 else{
-                    //std::cout << str << " do not open port = " << start << '\n';
+                    std::cout << str << " do not open port = " << start << '\n';
                 }
             }
         }

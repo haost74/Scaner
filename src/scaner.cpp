@@ -51,7 +51,7 @@ int scaner::scan(std::string addr, int port) {
 
     FD_ZERO(&fdset);
     FD_SET(sock, &fdset);
-    tv.tv_sec = 10;             /* 10 second timeout */
+    tv.tv_sec = 1;             /* 10 second timeout */
     tv.tv_usec = 0;
 
     if (select(sock + 1, NULL, &fdset, NULL, &tv) == 1)
